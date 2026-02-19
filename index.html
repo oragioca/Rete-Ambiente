@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
-
     <title>Rete di associazione per lo sviluppo sostenibile</title>
     <meta name="description" content="Rete di Associazioni per lo sviluppo sostenible">
     <meta name="keywords" content="Legambiente, Tracce del Marchesato, La Chiave verde">
     <meta name="author" content="Ambiente">
 
     <!-- OPEN GRAPH -->
-    <meta property="og:title" content="Legambiente "Le castella">
+    <meta property="og:title" content="Legambiente Le Castella">
     <meta property="og:type" content="website">
     <meta property="og:url" content="................................">
 
@@ -124,7 +122,7 @@
         .game-card {
             background: linear-gradient(145deg, #3a3d5d, #2d3047);
             border-radius: 20px;
-            padding: 25px 15px;
+            padding: 15px 15px 20px;   /* ridotto padding superiore per l'immagine */
             text-align: center;
             text-decoration: none;
             color: white;
@@ -135,9 +133,9 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* allinea in alto */
             align-items: center;
-            min-height: 200px;
+            min-height: 280px;           /* aumentato per contenere l'immagine */
         }
         
         .game-card::before {
@@ -172,6 +170,18 @@
             font-weight: bold;
             font-size: 1.1rem;
             color: var(--light);
+            margin-top: 8px;
+        }
+
+        /* Nuovo stile per le immagini nelle card */
+        .card-image {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;          /* ritaglia per riempire lo spazio senza deformare */
+            border-radius: 12px;
+            margin-bottom: 10px;
+            border: 2px solid var(--accent); /* leggero bordo per abbinarsi */
+            display: block;
         }
         
         /* Riga finale: commenti a tutta larghezza */
@@ -309,19 +319,52 @@
         <!-- GAMES SECTION -->
         <section class="games-section">
             
-            <!-- Griglia principale con 15 card → 3 righe da 5 (su desktop) -->
+            <!-- Griglia principale con 7 card (poi le altre) -->
             <div class="games-grid">
-                <a href="legambiente Le Castella.html" class="game-card"><span class="game-icon">➕</span><div class="game-name">Legambiente Le Castella</div></a>
-                <a href="tracce del marchesato.html" class="game-card"><div class="game-name">Tracce del marchesato</div></a>
-                <a href="la chiave verde.html" class="game-card"><span class="game-icon">🎯</span><div class="game-name">La chiave verde</div></a>
-                <a href="cammino sostenibile.html" class="game-card"><span class="game-icon">✖️</span><div class="game-name">Cammino sostenibile</div></a>
-                <a href="gtckroton.html" class="game-card"><span class="game-icon">📊</span><div class="game-name">GTC KROTON</div></a>
-                <a href="cammino magna grecia.html" class="game-card"><span class="game-icon">🔁</span><div class="game-name">SCammino della Magna</div></a>
+                <!-- Card Legambiente (senza immagine per ora) -->
+                <a href="legambiente Le Castella.html" class="game-card">
+                    <span class="game-icon">➕</span>
+                    <div class="game-name">Legambiente Le Castella</div>
                 </a>
-                <a href="Gemetria 2.html" class="game-card"> <span class="game-icon">🧊</span><div class="game-name">Geometria 2</div></a>
+                
+                <!-- Card Tracce del marchesato CON IMMAGINE -->
+                <a href="tracce del marchesato.html" class="game-card">
+                    <img src="marchesato-192x192.png" alt="Tracce del Marchesato" class="card-image">
+                    <div class="game-name">Tracce del marchesato</div>
+                </a>
+                
+                <!-- Card La chiave verde -->
+                <a href="la chiave verde.html" class="game-card">
+                    <span class="game-icon">🎯</span>
+                    <div class="game-name">La chiave verde</div>
+                </a>
+                
+                <!-- Card Cammino sostenibile -->
+                <a href="cammino sostenibile.html" class="game-card">
+                    <span class="game-icon">✖️</span>
+                    <div class="game-name">Cammino sostenibile</div>
+                </a>
+                
+                <!-- Card GTC KROTON -->
+                <a href="gtckroton.html" class="game-card">
+                    <span class="game-icon">📊</span>
+                    <div class="game-name">GTC KROTON</div>
+                </a>
+                
+                <!-- Card Cammino della Magna -->
+                <a href="cammino magna grecia.html" class="game-card">
+                    <span class="game-icon">🔁</span>
+                    <div class="game-name">Cammino della Magna</div>
+                </a>
+                
+                <!-- Card Geometria 2 (esempio) -->
+                <a href="Gemetria 2.html" class="game-card">
+                    <span class="game-icon">🧊</span>
+                    <div class="game-name">Geometria 2</div>
+                </a>
             </div>
             
-            <!-- Riga finale con solo la card commenti (occupa tutta la riga) -->
+            <!-- Riga finale con solo la card commenti -->
             <div class="final-row">
                 <div class="comment-card">
                     <h3>✍️ Lascia un commento</h3>
@@ -340,7 +383,7 @@
         
         <!-- FOOTER -->
         <footer>
-            <p><strong>GiochiMatematici.vercel.app</strong> - Piattaforma educativa per la scuola primaria © RG 2026</p>
+            <p><strong>Rete Associazioni</strong> - Piattaforma per la sostenibilità © 2026</p>
         </footer>
     </div>
 
@@ -353,6 +396,5 @@
         });
     </script>
 </body>
-
 </html>
 
